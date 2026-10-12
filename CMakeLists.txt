@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.30)
 
 set(KF_VERSION "6.30.0") # handled by release scripts
 project(KDBusAddons VERSION ${KF_VERSION})
@@ -20,7 +20,7 @@ include(KDEGitCommitHooks)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 
-set(REQUIRED_QT_VERSION 6.9.0)
+set(REQUIRED_QT_VERSION 6.10.0)
 find_package(Qt6DBus ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 find_package(Qt6Gui ${REQUIRED_QT_VERSION} CONFIG) # qtx11extras_p.h
 
@@ -35,6 +35,7 @@ include(ECMGenerateHeaders)
 include(ECMGenerateExportHeader)
 include(ECMMarkNonGuiExecutable)
 include(ECMGenerateQDoc)
+include(ECMInstalledLibraryCheck)
 
 include(ECMPoQmTools)
 
